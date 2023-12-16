@@ -51,6 +51,7 @@ async function addScore(){
     headers:{
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
   };
   const response = await fetch(`${process.env.API_BASE_URL}/scores/addScore`, options);
   console.log(response);

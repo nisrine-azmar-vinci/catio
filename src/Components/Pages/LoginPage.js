@@ -124,6 +124,7 @@ async function deleteUser(e){
     headers:{
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
   };
   const response = await fetch(`${process.env.API_BASE_URL}/users/deleteUser`, options);
 
@@ -146,6 +147,7 @@ async function loginUser(e){
     headers:{
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
   };
   const response = await fetch(`${process.env.API_BASE_URL}/users/loginUser`, options);
 

@@ -42,6 +42,7 @@ async function getBestScoreByFish(){
     headers:{
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
   };
   try {
     const response = await fetch(`${process.env.API_BASE_URL}/scores/getFish`, options);
