@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import ScoreLabel from './ScoreLabel';
 import TimerLabel from './TimerLabel';
 import gameConfig  from "./gameConfig";
+import Navigate from '../Router/Navigate';
  
 import skyAsset from '../../assets/sky2.jpg';
 import platformAsset from '../../assets/ground.png';
@@ -203,7 +204,7 @@ class GameScene extends Phaser.Scene {
  
     if (this.gameOver) {
       // aller sur la nouvelle page game over
-      window.location.href= '/gameOver';
+      Navigate('/gameOver');
       }
    
     this.timing += this.groundSpeed * 0.08;
