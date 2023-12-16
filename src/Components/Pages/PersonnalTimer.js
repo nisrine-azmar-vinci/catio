@@ -43,11 +43,11 @@ backButton.addEventListener('click', redirectToUniversalScoreMenu);
 // function to get all the scores of the user sorted by time
  async function getUserScoreByTime(){
   // get the email of the user
-  const email = localStorage.getItem('email');
+  const firstname= localStorage.getItem('firstname');
   const options = {
     method: 'POST',
     body: JSON.stringify({
-      email
+      firstname
     }),
     headers:{
       'Content-Type': 'application/json',

@@ -36,11 +36,11 @@ const personnalFish = async () => {
 
 // function to get the scores of the user sorted by fish
 async function getUserScoreByFish(){
-  const email = localStorage.getItem('email');
+  const firstname=localStorage.getItem('firstname');
   const options = {
     method: 'POST',
     body: JSON.stringify({
-      email
+      firstname
     }),
     headers:{
       'Content-Type': 'application/json',
