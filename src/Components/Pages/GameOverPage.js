@@ -21,6 +21,11 @@ const GameOverPage = () => {
     addScore();
   }
   
+ 
+  const scoreElement = document.querySelector('#score'); 
+  if (scoreElement) {
+    scoreElement.innerText = `Fish: ${localStorage.getItem('fish') || 0}`;
+  }
   // get buttons
   const replayButton = document.querySelector('#replayButton');
   const scoreButton = document.querySelector('#scores');
@@ -64,7 +69,7 @@ function renderContent(){
             <div id="textContainerGameOver">
                 <h1 class=gameOverFont>GAME OVER!</h1>
                 <p class="pGameOverFont"> Timer : ${localStorage.getItem('timer')}</p>
-                <p class="pGameOverFont"> Fish : ${score} </p>
+                <p class="pGameOverFont"> Fish : ${localStorage.getItem('fish') || 0} </p>
             </div>
             <div id="buttonContainer">
                 <button id="replayButton" class="gameoverButton">REPLAY</button>
